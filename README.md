@@ -1,0 +1,1 @@
+This is a faq-accordion card using pure HTML and CSS

@@ -1,0 +1,33 @@
+.faq-question {
+    color: $PrimaryColor;
+    display: flex;
+    width: inherit;
+    flex-direction: column-reverse;
+    cursor: pointer;
+    border-bottom: 1px solid $DividerColor;
+
+    p {
+        line-height: 1.5em;
+    }
+    
+    &--title:hover {
+        color: orange;
+    }
+   
+    &--title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            padding-right: 10px;
+        }
+
+    }
+
+    &--answer {
+        display: none;
+    }
+
+  
+}

@@ -1,0 +1,313 @@
+@import url(c:\Users\d\Desktop\Sites\faq-accordion-card\node_modules\normalize-css\normalize.css);
+@-webkit-keyframes cube {
+  0% {
+    top: 255px;
+  }
+  50% {
+    top: 260px;
+  }
+  100% {
+    top: 255px;
+  }
+}
+@keyframes cube {
+  0% {
+    top: 255px;
+  }
+  50% {
+    top: 260px;
+  }
+  100% {
+    top: 255px;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 12px;
+  color: black;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat fixed;
+  background: linear-gradient(#af67e9, #6565e7) no-repeat fixed;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex-container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 960px;
+  height: 560px;
+  border-radius: 15px;
+}
+
+@media (max-width: 795px) {
+  .faq {
+    max-width: 90%;
+    min-height: 585px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10rem;
+  }
+}
+
+.faq-images-container {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background: url(../../images/illustration-woman-online-desktop.svg) no-repeat -75px, url(../../images/bg-pattern-desktop.svg) no-repeat -575px 65%;
+  position: relative;
+}
+
+@media (max-width: 795px) {
+  .faq-images-container {
+    background: none;
+    width: 100%;
+  }
+}
+
+.faq-images-container__cube {
+  position: absolute;
+  top: 260px;
+  left: -80px;
+  -webkit-animation: cube 1.5s infinite ease-in-out;
+          animation: cube 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 795px) {
+  .faq-images-container__cube {
+    display: none;
+  }
+}
+
+.faq-images-container__woman-mobile {
+  display: none;
+}
+
+.faq-images-container__bg-mobile {
+  display: none;
+}
+
+@media (max-width: 795px) {
+  .faq-images-container__woman-mobile {
+    display: block;
+    position: absolute;
+    left: 45%;
+    top: -107px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 795px) {
+  .faq-images-container__bg-mobile {
+    display: block;
+    position: absolute;
+    left: 49%;
+    top: 10px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.faq-questions-container {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 9rem 5rem 1rem;
+}
+
+@media (max-width: 795px) {
+  .faq-questions-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3rem 3rem 3rem 3rem;
+    margin: 0;
+  }
+}
+
+.faq-questions-container__list {
+  padding: 0;
+  width: inherit;
+}
+
+.faq-questions-container h1 {
+  font-size: 700;
+  width: inherit;
+  margin-bottom: 1.5em;
+}
+
+@media (max-width: 795px) {
+  .faq-questions-container h1 {
+    text-align: center;
+  }
+}
+
+.faq-questions-container #answer1:target {
+  display: block;
+}
+
+.faq-questions-container #answer1:target ~ .faq-question--title {
+  font-weight: 700;
+}
+
+.faq-questions-container #answer1:target ~ .faq-question--title > span > img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.faq-questions-container #answer2:target {
+  display: block;
+}
+
+.faq-questions-container #answer2:target ~ .faq-question--title {
+  font-weight: 700;
+}
+
+.faq-questions-container #answer2:target ~ .faq-question--title > span > img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.faq-questions-container #answer3:target {
+  display: block;
+}
+
+.faq-questions-container #answer3:target ~ .faq-question--title {
+  font-weight: 700;
+}
+
+.faq-questions-container #answer3:target ~ .faq-question--title > span > img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.faq-questions-container #answer4:target {
+  display: block;
+}
+
+.faq-questions-container #answer4:target ~ .faq-question--title {
+  font-weight: 700;
+}
+
+.faq-questions-container #answer4:target ~ .faq-question--title > span > img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.faq-questions-container #answer5:target {
+  display: block;
+}
+
+.faq-questions-container #answer5:target ~ .faq-question--title {
+  font-weight: 700;
+}
+
+.faq-questions-container #answer5:target ~ .faq-question--title > span > img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.faq-question {
+  color: #4a4b5e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  cursor: pointer;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.faq-question p {
+  line-height: 1.5em;
+}
+
+.faq-question--title:hover {
+  color: orange;
+}
+
+.faq-question--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq-question--title span {
+  padding-right: 10px;
+}
+
+.faq-question--answer {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

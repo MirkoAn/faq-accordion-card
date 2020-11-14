@@ -1,0 +1,15 @@
+.faq {
+    background-color: #ffffff;
+    display: flex;
+    width: 960px;
+    height: 560px;
+    border-radius: 15px;
+
+    @include atSmall {
+        max-width: 90%;
+        min-height: 585px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+    }
+}

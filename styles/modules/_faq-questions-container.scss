@@ -1,0 +1,54 @@
+.faq-questions-container {
+    flex-basis: 50%;;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding: 5rem 9rem 5rem 1rem;
+
+    @include atSmall {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        align-items: center;
+        padding: 3rem 3rem 3rem 3rem;
+        margin: 0;
+    }
+
+    &__list {
+        padding:0;
+        width: inherit;
+    }
+
+  
+    h1 {
+        font-size: 700;
+        width: inherit;
+        margin-bottom: 1.5em;
+
+        @include atSmall {
+            text-align: center;
+        }
+    }
+
+    $answer: 5;
+
+    @for $i from 1 to $answer + 1 {
+
+        #answer#{$i}:target {
+            display: block;
+        }
+
+        #answer#{$i}:target ~ .faq-question--title {
+            font-weight: 700;
+        }
+
+        #answer#{$i}:target ~ .faq-question--title>span>img {
+            transform: rotateX(180deg);
+        }
+    }
+   
+}
+
+
